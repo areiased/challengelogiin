@@ -1,0 +1,8 @@
+<div class="whole-main-page">
+    <div class="sidebar-div">
+        <app-sidebar (edittingItem)="editingItemParent($event)"></app-sidebar>
+    </div>
+    <div class="main-content-div">
+        <app-app-content [changeFormItemIndex]="changeFormItemIndex"></app-app-content>
+    </div>
+  </div>

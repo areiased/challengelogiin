@@ -1,0 +1,22 @@
+.whole-main-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .sidebar-div {
+        width: 100%;
+        max-width: 800px;
+        flex: 500px 2 1;
+    }
+
+    .main-content-div {
+        width: 100%;
+        max-width: 500px;
+        flex: 300px 1 1;
+    }
+}

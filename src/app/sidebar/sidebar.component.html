@@ -1,0 +1,35 @@
+<div class="sidebarpage-div m-1">
+    <table class="table table-hover table-responsive-sm">
+        <thead>
+        <tr class="table-primary">
+            <th scope="col">#ID</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Item Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Item Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of itemsList; let i = index" [attr.data-index]="i">
+            <th scope="row">{{ i }}</th>
+            <td>{{ item.itemName }}</td>
+            <td>{{ item.itemDescription }}</td>
+            <td>{{ item.itemPrice }} €</td>
+            <ng-container *ngIf="item.itemStock > 0; else noStockTemplate">
+                <td >{{ item.itemStock }}</td>
+            </ng-container>
+            <ng-template #noStockTemplate>
+                <td class="table-danger">{{ item.itemStock }}</td>
+            </ng-template>
+            <td>
+                <button type="button" (click)="editItem(i)" class="btn btn-success m-1">Edit</button>
+                <button type="button" (click)="deleteItem(i)" class="btn btn-danger m-1">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    Add random items to the list: <button type="button" (click)="generateRandomItems()" class="btn btn-primary m-1">Add 5 items!</button>
+
+
+</div>

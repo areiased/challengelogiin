@@ -1,0 +1,32 @@
+<div class="whole-appcontent-div m-1">
+    <div class="card">
+        <div class="card-header">
+            <h6>Create a new item, or select an existing item to edit here</h6>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="itemForm" id="itemFormElement" action="">
+                <div class="item-editor-div">
+                    <div class="mb-3">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input maxlength=20 formControlName="itemName" type="text" class="form-control" id="itemName" placeholder="Item Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemDescription" class="form-label">Item Description</label>
+                        <textarea maxlength=100 formControlName="itemDescription" class="form-control" id="itemDescription" placeholder="Explain your item in a quick sentence" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemPrice" class="form-label">Price (€)</label>
+                        <input min="0.00" formControlName="itemPrice" type="number" step="0.01" class="form-control" id="itemPrice" placeholder="Price for each (Ex. 1.50)" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemStock" class="form-label">Available Stock</label>
+                        <input min="0" formControlName="itemStock" type="number" step="1" pattern="\d+" class="form-control" id="itemStock" placeholder="The total stock of the item (units)" required>
+                    </div>
+                </div>
+                <button type="button" (click)="createNewItem()" [disabled]="itemForm.invalid" *ngIf="changeFormItemIndex === null" class="btn btn-primary m-1">Create New Item</button>
+                <button type="button" (click)="editItem()" [disabled]="itemForm.invalid" *ngIf="changeFormItemIndex != null" class="btn btn-success m-1">Edit Item</button>
+                <button type="button" (click)="clearForm()" *ngIf="changeFormItemIndex != null" class="btn btn-secondary m-1">Close / Cancel</button>
+            </form>
+        </div>
+    </div>    
+</div>
