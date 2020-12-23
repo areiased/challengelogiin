@@ -1,27 +1,22 @@
-# Desafiologiin
+# Challenge Logiin
+**- Create a simple webapp in "Master Detail" format that shows a list of items. Angular and Bootstrap should be used. We should be able to edit any item from the list.** 
+*Bonus:* I also made a full CRUD system where you can also create and delete any item.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
+In this project, Angular 10 was used with Bootstrap 8. Angular 11 is already available but still has some compatibility issues with Bootstrap (and TailwindCSS) components.
 
-## Development server
+How to test this project:
+Make sure you have NPM installed.
+Clone this repo, cd into it and then do:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    $ npm install && npm start
 
-## Code scaffolding
+Or build it in *"production mode"* with:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    $ npm install && npx @angular/cli@10 build --prod
 
-## Build
+*⭐️ By Eduardo Correia - [My LinkedIn Profile](https://www.linkedin.com/in/eduardoxcorreia/)*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+✅ ***Visit my other projects:***
+Visit my big personal project (Tech Community): [https://20cafes.com](https://20cafes.com)
+Visit my portfolio: [http://eduardocorreia.20cafes.com](http://eduardocorreia.20cafes.com)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
