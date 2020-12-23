@@ -15,6 +15,12 @@ Or build it in *"production mode"* with:
 
     $ npm install && npx @angular/cli@10 build --prod
 
+After that, just open your web browser (Chrome, Firefox or Safari, updated) and go to this URL (by default):
+
+    http://localhost:4200
+
+(or click [HERE](http://localhost:4200) )
+
 *⭐️ By Eduardo Correia - [My LinkedIn Profile](https://www.linkedin.com/in/eduardoxcorreia/)*
 
 
